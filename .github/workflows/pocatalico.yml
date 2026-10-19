@@ -12,7 +12,6 @@ permissions:
   contents: write
   pages: write
   id-token: write
-  administration: write
 
 concurrency:
   group: pocatalico-pages
@@ -44,12 +43,12 @@ jobs:
           unzip -q /tmp/pocatalico-src.zip
           test -f pocatalico-src/godot/project.godot
 
-      - name: Generate the pixel art from its scripts
+      - name: Generate the pixel art
         run: |
           python3 pocatalico-src/tools/make_pixel_assets.py 2>&1 | tee -a ci-build.log
           python3 pocatalico-src/tools/make_sprites.py 2>&1 | tee -a ci-build.log
 
-      - name: Download Godot 4.3 and the export templates
+      - name: Download Godot 4.3 and templates
         run: |
           curl -fsSL -o /tmp/godot.zip https://github.com/godotengine/godot-builds/releases/download/4.3-stable/Godot_v4.3-stable_linux.x86_64.zip
           unzip -q /tmp/godot.zip -d /tmp/godot-bin
@@ -60,7 +59,7 @@ jobs:
           test -x /tmp/godot-bin/Godot_v4.3-stable_linux.x86_64
           test -s "$HOME/.local/share/godot/export_templates/4.3.stable/web_nothreads_release.zip"
 
-      - name: Import the project and run the game tests
+      - name: Import and run the game tests
         run: |
           GODOT=/tmp/godot-bin/Godot_v4.3-stable_linux.x86_64
           cd pocatalico-src/godot
@@ -86,12 +85,12 @@ jobs:
         with:
           enablement: true
 
-      - name: Upload the game as the site artifact
+      - name: Upload the site artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
-      - name: Save the build log to the repo if anything failed
+      - name: Save the build log on failure
         if: failure()
         run: |
           { echo "POCATALICO CI build failed. Run: ${{ github.run_id }}"; echo; tail -n 300 ci-build.log 2>/dev/null || echo "(no log captured)"; } > ci-log.txt
