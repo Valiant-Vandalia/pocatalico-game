@@ -1,0 +1,302 @@
+POCATALICO CI build failed. Run: 39193168337
+
+PASS: dialogue: typed input to Moses answered
+PASS: shop: shop opens in buy mode
+PASS: shop: buy cowpea seed
+PASS: shop: seeds in inventory
+PASS: shop: sell corn
+PASS: shop: sale pays money (Year 1 corn price)
+PASS: shop: close returns to play
+PASS: work: timber yields cross-ties
+PASS: work: timber costs stamina
+PASS: work: mine shift pays
+PASS: save: save writes
+PASS: save: save loads
+PASS: save: money round trips
+PASS: story: Delaneys available in chapter 2
+PASS: story: Year 2 Crane offer pending
+PASS: story: ending triggers at the end of Year 4
+PASS: story: an ending evaluates
+PASS: story: free play switches on after the ending
+PASS: story: free play continues past the story years
+PASS: content: Story Night authored (Sylvania Moss)
+PASS: content: Ramp Supper authored
+PASS: content: four endings authored
+PASS: content: four chapter cards authored
+PASS: content: ten maps built
+---- SMOKE TEST ----
+checks run: 48, failures: 0
+SMOKE: ALL PASS
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+
+PASS: flow: new game reaches play state
+PASS: flow: new game starts in farmhouse
+PASS: flow: farmhouse door exit reaches the farm
+PASS: flow: all ten maps load
+PASS: flow: counter interact opens shop
+PASS: flow: bed sleeps to next day
+PASS: flow: morning panels drain back to play
+PASS: flow: Ramp Supper panel fires on Spring 14
+PASS: flow: Amos found for gift test
+PASS: flow: loved gift gives +8 friendship
+PASS: flow: Crane found in village
+PASS: flow: $400 offer marks minerals sold
+PASS: flow: $400 paid
+PASS: flow: sold and stayed ending evaluates
+PASS: flow: compact available with doubt arc and valley trust
+PASS: flow: Crane calls at the farm in Year 4
+PASS: flow: compact signs in dialogue
+PASS: flow: middle ground ending evaluates
+PASS: flow: Caleb found on the farm at midday
+PASS: flow: courtship accepted
+PASS: flow: chapter 3 mine pay includes scrip
+PASS: flow: company store takes scrip at face value
+PASS: flow: scrip spent at face
+PASS: flow: town store buys scrip
+PASS: flow: scrip sold at 80 cents on the dollar
+PASS: flow: cow buys at $30 design target
+PASS: flow: cow owned
+PASS: flow: cow gives milk
+---- PLAY TEST ----
+checks run: 28, failures: 0
+PLAY: ALL PASS
+Godot Engine v4.3.stable.official.77dcf97d8 - https://godotengine.org
+
+savepack: begin: Packing steps: 102
+	savepack: step 2: Storing File: res://.godot/imported/anvil.png-985883b7c10ad1b07e1ebba1d7a725c3.ctex
+	savepack: step 2: Storing File: res://assets/sprites/anvil.png.import
+	savepack: step 2: Storing File: res://.godot/imported/barrel.png-427012dcba0bd5eea07556efdaa851e1.ctex
+	savepack: step 2: Storing File: res://assets/sprites/barrel.png.import
+	savepack: step 3: Storing File: res://.godot/imported/bed.png-2a4ac332406338198313736f6195bf44.ctex
+	savepack: step 3: Storing File: res://assets/sprites/bed.png.import
+	savepack: step 4: Storing File: res://.godot/imported/boat.png-7fcd1e3aec5b91f0d6fe0e93028edd13.ctex
+	savepack: step 4: Storing File: res://assets/sprites/boat.png.import
+	savepack: step 5: Storing File: res://.godot/imported/chair.png-f0a87d226598c4868bf3a609a910107c.ctex
+	savepack: step 5: Storing File: res://assets/sprites/chair.png.import
+	savepack: step 5: Storing File: res://.godot/imported/counter.png-0d282777919ed7107d017b0c87c29116.ctex
+	savepack: step 5: Storing File: res://assets/sprites/counter.png.import
+	savepack: step 6: Storing File: res://.godot/imported/crate.png-72c474bbc3cb8e73802f6b5234f63dee.ctex
+	savepack: step 6: Storing File: res://assets/sprites/crate.png.import
+	savepack: step 7: Storing File: res://.godot/imported/crop_clover_0.png-14acd6c7ba3b121d3651f9a74bc91d70.ctex
+	savepack: step 7: Storing File: res://assets/sprites/crop_clover_0.png.import
+	savepack: step 8: Storing File: res://.godot/imported/crop_clover_1.png-438afc658e8a7d0a2f0f9833315570dd.ctex
+	savepack: step 8: Storing File: res://assets/sprites/crop_clover_1.png.import
+	savepack: step 9: Storing File: res://.godot/imported/crop_clover_2.png-97afba72c3284fd8bcca8b53ca694508.ctex
+	savepack: step 9: Storing File: res://assets/sprites/crop_clover_2.png.import
+	savepack: step 9: Storing File: res://.godot/imported/crop_clover_3.png-2f6f7a8b83e31ef2706bb6050d396795.ctex
+	savepack: step 9: Storing File: res://assets/sprites/crop_clover_3.png.import
+	savepack: step 10: Storing File: res://.godot/imported/crop_corn_0.png-18277d715f89b40058c651a7c484e58d.ctex
+	savepack: step 10: Storing File: res://assets/sprites/crop_corn_0.png.import
+	savepack: step 11: Storing File: res://.godot/imported/crop_corn_1.png-7157e9c22ca297fdf5bf9246f4aef051.ctex
+	savepack: step 11: Storing File: res://assets/sprites/crop_corn_1.png.import
+	savepack: step 12: Storing File: res://.godot/imported/crop_corn_2.png-4b1cd21fd084f811c2c73abc63e3bc5e.ctex
+	savepack: step 12: Storing File: res://assets/sprites/crop_corn_2.png.import
+	savepack: step 13: Storing File: res://.godot/imported/crop_corn_3.png-bb0c45dfb53086dc081c38fc66bac34b.ctex
+	savepack: step 13: Storing File: res://assets/sprites/crop_corn_3.png.import
+	savepack: step 13: Storing File: res://.godot/imported/crop_cowpeas_0.png-db39fcaeb71b966bb97b5d3ade533983.ctex
+	savepack: step 13: Storing File: res://assets/sprites/crop_cowpeas_0.png.import
+	savepack: step 14: Storing File: res://.godot/imported/crop_cowpeas_1.png-6eddeb69fd2bc8010d1b3312ae10a605.ctex
+	savepack: step 14: Storing File: res://assets/sprites/crop_cowpeas_1.png.import
+	savepack: step 15: Storing File: res://.godot/imported/crop_cowpeas_2.png-9b001ca7bf893b97b2d4437dce4c8bac.ctex
+	savepack: step 15: Storing File: res://assets/sprites/crop_cowpeas_2.png.import
+	savepack: step 16: Storing File: res://.godot/imported/crop_cowpeas_3.png-767b2aaeef9f955098664c595ad5fb42.ctex
+	savepack: step 16: Storing File: res://assets/sprites/crop_cowpeas_3.png.import
+	savepack: step 17: Storing File: res://.godot/imported/crop_tobacco_0.png-e7e037bbaad3cdeb5a8546327a6487cf.ctex
+	savepack: step 17: Storing File: res://assets/sprites/crop_tobacco_0.png.import
+	savepack: step 17: Storing File: res://.godot/imported/crop_tobacco_1.png-15c4c9d7f580b6854cd1e26595c22141.ctex
+	savepack: step 17: Storing File: res://assets/sprites/crop_tobacco_1.png.import
+	savepack: step 18: Storing File: res://.godot/imported/crop_tobacco_2.png-fc91249a7bb9906e53113059bb9e04cd.ctex
+	savepack: step 18: Storing File: res://assets/sprites/crop_tobacco_2.png.import
+	savepack: step 19: Storing File: res://.godot/imported/crop_tobacco_3.png-5da24c4c79a90d954706b909e6e2e550.ctex
+	savepack: step 19: Storing File: res://assets/sprites/crop_tobacco_3.png.import
+	savepack: step 20: Storing File: res://.godot/imported/cross.png-8ec6f67bc4e4eb5ac5ab932969ca16bb.ctex
+	savepack: step 20: Storing File: res://assets/sprites/cross.png.import
+	savepack: step 21: Storing File: res://.godot/imported/dog.png-980f3ee55972ca94cd6e484d7a9b5ecc.ctex
+	savepack: step 21: Storing File: res://assets/sprites/dog.png.import
+	savepack: step 21: Storing File: res://.godot/imported/exhibit.png-ef77a69b084ebf06c91e2f30e780a84b.ctex
+	savepack: step 21: Storing File: res://assets/sprites/exhibit.png.import
+	savepack: step 22: Storing File: res://.godot/imported/fence_h.png-910fdd0757cf0b1182bb07f2636431d8.ctex
+	savepack: step 22: Storing File: res://assets/sprites/fence_h.png.import
+	savepack: step 23: Storing File: res://.godot/imported/fence_v.png-796cf428342509e4f4831d19dfc23a62.ctex
+	savepack: step 23: Storing File: res://assets/sprites/fence_v.png.import
+	savepack: step 24: Storing File: res://.godot/imported/guitar.png-e84c926b7893e8602cc2e5a2cf853e1a.ctex
+	savepack: step 24: Storing File: res://assets/sprites/guitar.png.import
+	savepack: step 25: Storing File: res://.godot/imported/hay.png-3f7146ee299be8fddfd84f44db79bb00.ctex
+	savepack: step 25: Storing File: res://assets/sprites/hay.png.import
+	savepack: step 25: Storing File: res://.godot/imported/item_account_book.png-b4c1bd88c07fe9e9cc3071ed41c1aec4.ctex
+	savepack: step 25: Storing File: res://assets/sprites/item_account_book.png.import
+	savepack: step 26: Storing File: res://.godot/imported/item_apple_butter.png-9639b7ed081a10691ffb0b3bfb340965.ctex
+	savepack: step 26: Storing File: res://assets/sprites/item_apple_butter.png.import
+	savepack: step 27: Storing File: res://.godot/imported/item_book_of_poems.png-38c089f991657281248f275b97ea5a52.ctex
+	savepack: step 27: Storing File: res://assets/sprites/item_book_of_poems.png.import
+	savepack: step 28: Storing File: res://.godot/imported/item_canned_peaches.png-286bbe462b593aeaeab082f4da67bbfb.ctex
+	savepack: step 28: Storing File: res://assets/sprites/item_canned_peaches.png.import
+	savepack: step 28: Storing File: res://.godot/imported/item_catfish.png-38eca8b315311ed5fc845a2a0c932207.ctex
+	savepack: step 28: Storing File: res://assets/sprites/item_catfish.png.import
+	savepack: step 29: Storing File: res://.godot/imported/item_clover_seed.png-e134b36b468d25c9877771acaf53d76c.ctex
+	savepack: step 29: Storing File: res://assets/sprites/item_clover_seed.png.import
+	savepack: step 30: Storing File: res://.godot/imported/item_coffee.png-0543edf6f9a9ffc281804a6ce54d5e0b.ctex
+	savepack: step 30: Storing File: res://assets/sprites/item_coffee.png.import
+	savepack: step 31: Storing File: res://.godot/imported/item_company_scrip.png-43d038021853cdcdd13e92db8b42725b.ctex
+	savepack: step 31: Storing File: res://assets/sprites/item_company_scrip.png.import
+	savepack: step 32: Storing File: res://.godot/imported/item_corn.png-383511c5dcfc9ebec079e98d8fa25afc.ctex
+	savepack: step 32: Storing File: res://assets/sprites/item_corn.png.import
+	savepack: step 32: Storing File: res://.godot/imported/item_cornbread.png-0dd6d5e531068f2aa3504214eec9143f.ctex
+	savepack: step 32: Storing File: res://assets/sprites/item_cornbread.png.import
+	savepack: step 33: Storing File: res://.godot/imported/item_corn_seed.png-fa1dbb7b4acd24f0c4501f2f79a027e3.ctex
+	savepack: step 33: Storing File: res://assets/sprites/item_corn_seed.png.import
+	savepack: step 34: Storing File: res://.godot/imported/item_cowpeas.png-b757a3547533bedf88b64cfaa3770027.ctex
+	savepack: step 34: Storing File: res://assets/sprites/item_cowpeas.png.import
+	savepack: step 35: Storing File: res://.godot/imported/item_cowpea_seed.png-a9055cbc94d144d974c0e469adce7ff4.ctex
+	savepack: step 35: Storing File: res://assets/sprites/item_cowpea_seed.png.import
+	savepack: step 36: Storing File: res://.godot/imported/item_cross-ties.png-dba42238130f75bf6d5c05cdfdf4e2c5.ctex
+	savepack: step 36: Storing File: res://assets/sprites/item_cross-ties.png.import
+	savepack: step 36: Storing File: res://.godot/imported/item_hoe.png-a820522def8991b16fb581289d84a7b7.ctex
+	savepack: step 36: Storing File: res://assets/sprites/item_hoe.png.import
+	savepack: step 37: Storing File: res://.godot/imported/item_honeycomb.png-2bb81cda175fe891a8489d324599566e.ctex
+	savepack: step 37: Storing File: res://assets/sprites/item_honeycomb.png.import
+	savepack: step 38: Storing File: res://.godot/imported/item_lemon_drops.png-a3b5eb96d4b5800e5eceda1077d2857b.ctex
+	savepack: step 38: Storing File: res://assets/sprites/item_lemon_drops.png.import
+	savepack: step 39: Storing File: res://.godot/imported/item_lumber.png-5d8e4aea782e2d33ff3b329a95874f8b.ctex
+	savepack: step 39: Storing File: res://assets/sprites/item_lumber.png.import
+	savepack: step 40: Storing File: res://.godot/imported/item_milk.png-9e5e6a0dc13682d37acc5b7e3465704c.ctex
+	savepack: step 40: Storing File: res://assets/sprites/item_milk.png.import
+	savepack: step 40: Storing File: res://.godot/imported/item_molasses.png-2a0a5a5b0852df00e694f9b9b8a335d2.ctex
+	savepack: step 40: Storing File: res://assets/sprites/item_molasses.png.import
+	savepack: step 41: Storing File: res://.godot/imported/item_ramps.png-05b7aa7f204f60759c7a3af911aaecae.ctex
+	savepack: step 41: Storing File: res://assets/sprites/item_ramps.png.import
+	savepack: step 42: Storing File: res://.godot/imported/item_salt_pork.png-4298bf62c8fbf895a002aab8a027c444.ctex
+	savepack: step 42: Storing File: res://assets/sprites/item_salt_pork.png.import
+	savepack: step 43: Storing File: res://.godot/imported/item_staves.png-689e84cd814018ee066d20a001c3d590.ctex
+	savepack: step 43: Storing File: res://assets/sprites/item_staves.png.import
+	savepack: step 44: Storing File: res://.godot/imported/item_tobacco_leaf.png-cef76e01a11babce4e8ebc80bf786dd5.ctex
+	savepack: step 44: Storing File: res://assets/sprites/item_tobacco_leaf.png.import
+	savepack: step 44: Storing File: res://.godot/imported/item_tobacco_seed.png-788f68a62a4010b78d0a90d8c8c32cab.ctex
+	savepack: step 44: Storing File: res://assets/sprites/item_tobacco_seed.png.import
+	savepack: step 45: Storing File: res://.godot/imported/item_walnuts.png-49e8554400f8ff696c6b0907d4e48116.ctex
+	savepack: step 45: Storing File: res://assets/sprites/item_walnuts.png.import
+	savepack: step 46: Storing File: res://.godot/imported/item_watering_can.png-8728b09340faa786fc39dd9362c1ab5d.ctex
+	savepack: step 46: Storing File: res://assets/sprites/item_watering_can.png.import
+	savepack: step 47: Storing File: res://.godot/imported/item_wildflowers.png-d35d80728bf5ee6cc54676719fc18f82.ctex
+	savepack: step 47: Storing File: res://assets/sprites/item_wildflowers.png.import
+	savepack: step 48: Storing File: res://.godot/imported/logpile.png-5179ada9b8713d7af85960993ed28ccf.ctex
+	savepack: step 48: Storing File: res://assets/sprites/logpile.png.import
+	savepack: step 48: Storing File: res://.godot/imported/mine_entrance.png-e81fba375e4227061409fe944c3bd0ea.ctex
+	savepack: step 48: Storing File: res://assets/sprites/mine_entrance.png.import
+	savepack: step 49: Storing File: res://.godot/imported/npc_ada_fern.png-0a59de496b4c7cd3b7b49ed248dd224f.ctex
+	savepack: step 49: Storing File: res://assets/sprites/npc_ada_fern.png.import
+	savepack: step 50: Storing File: res://.godot/imported/npc_amos_vale.png-9b241d728a33d7dfb59b41383a88ea63.ctex
+	savepack: step 50: Storing File: res://assets/sprites/npc_amos_vale.png.import
+	savepack: step 51: Storing File: res://.godot/imported/npc_caleb_fern.png-cf205a569347aa349d0887c8664972e5.ctex
+	savepack: step 51: Storing File: res://assets/sprites/npc_caleb_fern.png.import
+	savepack: step 52: Storing File: res://.godot/imported/npc_clara_bellamy.png-75ebe8ce12d78f32966c619f932fac38.ctex
+	savepack: step 52: Storing File: res://assets/sprites/npc_clara_bellamy.png.import
+	savepack: step 52: Storing File: res://.godot/imported/npc_elias_thorn.png-ba49ab65a26f5bc0b6c0531a49c1ec2b.ctex
+	savepack: step 52: Storing File: res://assets/sprites/npc_elias_thorn.png.import
+	savepack: step 53: Storing File: res://.godot/imported/npc_henry_cobb.png-e04c3e335bea474990ec667d1a7e11ae.ctex
+	savepack: step 53: Storing File: res://assets/sprites/npc_henry_cobb.png.import
+	savepack: step 54: Storing File: res://.godot/imported/npc_isaac_fern.png-f6a607a85fadf946ef351d9051a4b9c6.ctex
+	savepack: step 54: Storing File: res://assets/sprites/npc_isaac_fern.png.import
+	savepack: step 55: Storing File: res://.godot/imported/npc_joe_karnes.png-a22121581c77eb446d92e33a3d9cb6c2.ctex
+	savepack: step 55: Storing File: res://assets/sprites/npc_joe_karnes.png.import
+	savepack: step 55: Storing File: res://.godot/imported/npc_june_vale.png-58504021ce711317d5f952887189ea84.ctex
+	savepack: step 55: Storing File: res://assets/sprites/npc_june_vale.png.import
+	savepack: step 56: Storing File: res://.godot/imported/npc_moses_rook.png-ca01335092e0b535cef4c69ff73572ef.ctex
+	savepack: step 56: Storing File: res://assets/sprites/npc_moses_rook.png.import
+	savepack: step 57: Storing File: res://.godot/imported/npc_nora_delaney.png-ba37a2392a6e3a98db1801e66c7e60c0.ctex
+	savepack: step 57: Storing File: res://assets/sprites/npc_nora_delaney.png.import
+	savepack: step 58: Storing File: res://.godot/imported/npc_obadiah_loomis.png-61f8b2a005cda092a3c7d2250b234748.ctex
+	savepack: step 58: Storing File: res://assets/sprites/npc_obadiah_loomis.png.import
+	savepack: step 59: Storing File: res://.godot/imported/npc_peter_delaney.png-bf7a739cf2465d13abd1f40cade2b585.ctex
+	savepack: step 59: Storing File: res://assets/sprites/npc_peter_delaney.png.import
+	savepack: step 59: Storing File: res://.godot/imported/npc_sadie_loomis.png-d48a27111f3a0ab3fe3f099d64818c30.ctex
+	savepack: step 59: Storing File: res://assets/sprites/npc_sadie_loomis.png.import
+	savepack: step 60: Storing File: res://.godot/imported/npc_samuel_hart.png-bf31ada8f343c4d256908b886400a566.ctex
+	savepack: step 60: Storing File: res://assets/sprites/npc_samuel_hart.png.import
+	savepack: step 61: Storing File: res://.godot/imported/npc_silas_crowe.png-ea5a18a7b326336c12b611d5300edddb.ctex
+	savepack: step 61: Storing File: res://assets/sprites/npc_silas_crowe.png.import
+	savepack: step 62: Storing File: res://.godot/imported/npc_sylvania_moss.png-bddfcc6e5991a0f9815a8ff38993a133.ctex
+	savepack: step 62: Storing File: res://assets/sprites/npc_sylvania_moss.png.import
+	savepack: step 63: Storing File: res://.godot/imported/npc_whitaker_crane.png-0a3a13811f4f6ded9155db551872ad65.ctex
+	savepack: step 63: Storing File: res://assets/sprites/npc_whitaker_crane.png.import
+	savepack: step 63: Storing File: res://.godot/imported/npc_wren_vale.png-f9f51503742f3e2a2e3c817187f72f23.ctex
+	savepack: step 63: Storing File: res://assets/sprites/npc_wren_vale.png.import
+	savepack: step 64: Storing File: res://.godot/imported/player.png-e1eaffe0873063c60a0d0b322e4d87d9.ctex
+	savepack: step 64: Storing File: res://assets/sprites/player.png.import
+	savepack: step 65: Storing File: res://.godot/imported/shelf.png-4aba2d6e3a8cce39a20d8fc69a0cdfdd.ctex
+	savepack: step 65: Storing File: res://assets/sprites/shelf.png.import
+	savepack: step 66: Storing File: res://.godot/imported/sign.png-ae4f2b9db346b8a35740be21a604fd0d.ctex
+	savepack: step 66: Storing File: res://assets/sprites/sign.png.import
+	savepack: step 67: Storing File: res://.godot/imported/stove.png-4a5aae02c78927236fa6e3b3c256d0ea.ctex
+	savepack: step 67: Storing File: res://assets/sprites/stove.png.import
+	savepack: step 67: Storing File: res://.godot/imported/stump.png-a7f5effff6cf726fe5d84600dd1db5c6.ctex
+	savepack: step 67: Storing File: res://assets/sprites/stump.png.import
+	savepack: step 68: Storing File: res://.godot/imported/table.png-0afb39c623f92c6645a8e7795ac9c73d.ctex
+	savepack: step 68: Storing File: res://assets/sprites/table.png.import
+	savepack: step 69: Storing File: res://.godot/imported/tipple.png-382ec06e5348a4870e60e2a9be0e4264.ctex
+	savepack: step 69: Storing File: res://assets/sprites/tipple.png.import
+	savepack: step 70: Storing File: res://.godot/imported/tree_oak.png-7e8474f21bb225a61d371183b1aeebdd.ctex
+	savepack: step 70: Storing File: res://assets/sprites/tree_oak.png.import
+	savepack: step 71: Storing File: res://.godot/imported/tree_pine.png-0f23866bbb7cd8625073b38d11f806e9.ctex
+	savepack: step 71: Storing File: res://assets/sprites/tree_pine.png.import
+	savepack: step 71: Storing File: res://.godot/imported/well.png-aae79cb9f34640b8599764d87a93a066.ctex
+	savepack: step 71: Storing File: res://assets/sprites/well.png.import
+	savepack: step 72: Storing File: res://assets/palette.json
+	savepack: step 73: Storing File: res://.godot/imported/tiles.png-0d11a4bcdfb48056f67a66da241684a1.ctex
+	savepack: step 73: Storing File: res://assets/tiles.png.import
+	savepack: step 74: Storing File: res://data/npc_ada_fern.json
+	savepack: step 75: Storing File: res://data/npc_amos_vale.json
+	savepack: step 75: Storing File: res://data/npc_caleb_fern.json
+	savepack: step 76: Storing File: res://data/npc_clara_bellamy.json
+	savepack: step 77: Storing File: res://data/npc_elias_thorn.json
+	savepack: step 78: Storing File: res://data/npc_henry_cobb.json
+	savepack: step 78: Storing File: res://data/npc_isaac_fern.json
+	savepack: step 79: Storing File: res://data/npc_joe_karnes.json
+	savepack: step 80: Storing File: res://data/npc_june_vale.json
+	savepack: step 81: Storing File: res://data/npc_moses_rook.json
+	savepack: step 82: Storing File: res://data/npc_nora_delaney.json
+	savepack: step 82: Storing File: res://data/npc_obadiah_loomis.json
+	savepack: step 83: Storing File: res://data/npc_peter_delaney.json
+	savepack: step 84: Storing File: res://data/npc_sadie_loomis.json
+	savepack: step 85: Storing File: res://data/npc_samuel_hart.json
+	savepack: step 86: Storing File: res://data/npc_silas_crowe.json
+	savepack: step 86: Storing File: res://data/npc_whitaker_crane.json
+	savepack: step 87: Storing File: res://data/npc_wren_vale.json
+	savepack: step 88: Storing File: res://scripts/char_sprite.gdc
+	savepack: step 89: Storing File: res://scripts/dialogue.gdc
+	savepack: step 90: Storing File: res://scripts/dialogue_data.gdc
+	savepack: step 90: Storing File: res://scripts/game.gdc
+	savepack: step 91: Storing File: res://scripts/main.gdc
+	savepack: step 92: Storing File: res://scripts/npc.gdc
+	savepack: step 93: Storing File: res://scripts/player.gdc
+	savepack: step 94: Storing File: res://scripts/world.gdc
+	savepack: step 94: Storing File: res://tests/play_test.gdc
+	savepack: step 95: Storing File: res://.godot/exported/133200997/export-bc416e232add018382e68003360fc7e0-play_test.scn
+	savepack: step 96: Storing File: res://tests/shot_test.gdc
+	savepack: step 97: Storing File: res://.godot/exported/133200997/export-e07780beaf06a3d5094593743cf2eb56-shot_test.scn
+	savepack: step 98: Storing File: res://tests/smoke_test.gdc
+	savepack: step 98: Storing File: res://.godot/exported/133200997/export-50ff61c7910d7fec11907738efc0aeb6-smoke_test.scn
+	savepack: step 99: Storing File: res://tests/start_test.gdc
+	savepack: step 100: Storing File: res://.godot/exported/133200997/export-b96f921d71426573e2a5ccae49a2963a-start_test.scn
+	savepack: step 101: Storing File: res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
+	savepack: step 101: Storing File: res://scripts/char_sprite.gd.remap
+	savepack: step 101: Storing File: res://scripts/dialogue.gd.remap
+	savepack: step 101: Storing File: res://scripts/dialogue_data.gd.remap
+	savepack: step 101: Storing File: res://scripts/game.gd.remap
+	savepack: step 101: Storing File: res://scripts/main.gd.remap
+	savepack: step 101: Storing File: res://scripts/npc.gd.remap
+	savepack: step 101: Storing File: res://scripts/player.gd.remap
+	savepack: step 101: Storing File: res://scripts/world.gd.remap
+	savepack: step 101: Storing File: res://tests/play_test.gd.remap
+	savepack: step 101: Storing File: res://tests/play_test.tscn.remap
+	savepack: step 101: Storing File: res://tests/shot_test.gd.remap
+	savepack: step 101: Storing File: res://tests/shot_test.tscn.remap
+	savepack: step 101: Storing File: res://tests/smoke_test.gd.remap
+	savepack: step 101: Storing File: res://tests/smoke_test.tscn.remap
+	savepack: step 101: Storing File: res://tests/start_test.gd.remap
+	savepack: step 101: Storing File: res://tests/start_test.tscn.remap
+	savepack: step 101: Storing File: res://main.tscn.remap
+	savepack: step 101: Storing File: res://.godot/global_script_class_cache.cfg
+	savepack: step 101: Storing File: res://.godot/uid_cache.bin
+	savepack: step 101: Storing File: res://project.binary
+savepack: end
