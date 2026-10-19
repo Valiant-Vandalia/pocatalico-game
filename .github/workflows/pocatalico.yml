@@ -1,0 +1,114 @@
+name: Build and publish POCATALICO
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "pocatalico-src.zip.part-*"
+      - ".github/workflows/pocatalico.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  administration: write
+
+concurrency:
+  group: pocatalico-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Use Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Pillow
+        run: pip install pillow
+
+      - name: Unpack the game source
+        run: |
+          for f in pocatalico-src.zip.part-*; do base64 --decode "$f" > "/tmp/$f.bin"; done
+          cat /tmp/pocatalico-src.zip.part-*.bin > /tmp/pocatalico-src.zip
+          unzip -q /tmp/pocatalico-src.zip
+          test -f pocatalico-src/godot/project.godot
+
+      - name: Generate the pixel art from its scripts
+        run: |
+          python3 pocatalico-src/tools/make_pixel_assets.py 2>&1 | tee -a ci-build.log
+          python3 pocatalico-src/tools/make_sprites.py 2>&1 | tee -a ci-build.log
+
+      - name: Download Godot 4.3 and the export templates
+        run: |
+          curl -fsSL -o /tmp/godot.zip https://github.com/godotengine/godot-builds/releases/download/4.3-stable/Godot_v4.3-stable_linux.x86_64.zip
+          unzip -q /tmp/godot.zip -d /tmp/godot-bin
+          curl -fsSL -o /tmp/templates.tpz https://github.com/godotengine/godot-builds/releases/download/4.3-stable/Godot_v4.3-stable_export_templates.tpz
+          mkdir -p ~/.local/share/godot/export_templates/4.3.stable /tmp/tpz
+          unzip -q /tmp/templates.tpz -d /tmp/tpz
+          cp -r /tmp/tpz/templates/. ~/.local/share/godot/export_templates/4.3.stable/
+          test -x /tmp/godot-bin/Godot_v4.3-stable_linux.x86_64
+          test -s "$HOME/.local/share/godot/export_templates/4.3.stable/web_nothreads_release.zip"
+
+      - name: Import the project and run the game tests
+        run: |
+          GODOT=/tmp/godot-bin/Godot_v4.3-stable_linux.x86_64
+          cd pocatalico-src/godot
+          $GODOT --headless --path . --import 2>&1 | tee -a ../../ci-build.log
+          for t in start_test smoke_test play_test; do
+            marker=$(echo "${t%_test}" | tr '[:lower:]' '[:upper:]')
+            timeout -k 10s 180s $GODOT --headless --fixed-fps 60 --path . "res://tests/$t.tscn" 2>&1 | tee -a ../../ci-build.log
+            grep -Fq "$marker: ALL PASS" ../../ci-build.log || { echo "Missing pass marker for $t"; exit 1; }
+          done
+
+      - name: Export the web game
+        run: |
+          GODOT=/tmp/godot-bin/Godot_v4.3-stable_linux.x86_64
+          mkdir -p site
+          $GODOT --headless --path pocatalico-src/godot --export-release "Web" "$GITHUB_WORKSPACE/site/index.html" 2>&1 | tee -a ci-build.log
+          for file in index.html index.js index.wasm index.pck; do
+            test -s "$GITHUB_WORKSPACE/site/$file"
+          done
+          ls -la site
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Upload the game as the site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Save the build log to the repo if anything failed
+        if: failure()
+        run: |
+          { echo "POCATALICO CI build failed. Run: ${{ github.run_id }}"; echo; tail -n 300 ci-build.log 2>/dev/null || echo "(no log captured)"; } > ci-log.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ci-log.txt
+          git commit -m "Record failed POCATALICO build log" || true
+          git push || true
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    timeout-minutes: 10
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
