@@ -4,7 +4,13 @@ on:
   push:
     branches: [main]
     paths:
-      - "pocatalico-src.zip.part-*"
+      # Only the LAST part of the split zip triggers a build. The parts are
+      # uploaded in order (part-00, part-01, part-02), so a run that starts
+      # on part-00 or part-01 unpacks a half-updated zip and fails in ~10s
+      # (that was runs #4 and #6 on 2026-10-19, and the failure notices
+      # stacking up in Gmail). Triggering on part-02 only gives exactly one
+      # run per republish, after every part is in place.
+      - "pocatalico-src.zip.part-02"
       - ".github/workflows/pocatalico.yml"
   workflow_dispatch:
 
